@@ -2,7 +2,7 @@
 var md5 = require('md5');
 var request = require('request');
 request = request.defaults({jar: true});
-var config = require('./config').config;
+var config = require('../config').config;
 
 var pub_request = function(desc, file_list){
    

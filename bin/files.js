@@ -3,7 +3,7 @@ var iconv = require('iconv-lite');
 var encoding = 'cp936';
 var binaryEncoding = 'binary';
 var pub_request = require('./pub_request').pub_request;
-var config = require('./config').config;
+var config = require('../config').config;
 
 var qs = {
     user: config.hg_user,

@@ -1,7 +1,7 @@
 {
   "name": "add_pub_version",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "1.在当前目录运行npm install",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,5 +14,14 @@
     "md5": "^2.2.1",
     "request": "^2.79.0",
     "sprintf-js": "^1.0.3"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/realwall/add_pub_version.git"
+  },
+  "bugs": {
+    "url": "https://github.com/realwall/add_pub_version/issues"
+  },
+  "homepage": "https://github.com/realwall/add_pub_version#readme"
 }
