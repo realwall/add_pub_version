@@ -13,7 +13,7 @@
 
 		oa_user: 'realwallliu',  //oa用户名
     	oa_passwd: '',  //oa密码
-    	hg_user: 'yakai',  //hg用户名
+    	hg_user: 'relwall',  //hg用户名
     	hg_project: [
     		{
     			hg_dir: 'E:/product/work_loan_mobile',  //工程目录路径
