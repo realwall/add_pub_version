@@ -12,12 +12,21 @@
 3.在config.js中添加配置
 
 		oa_user: 'realwallliu',  //oa用户名
-    	oa_passwd_md5: '',  //oa密码
-    	hg_user: 'realwall',  //hg用户名
-	    hg_dir: 'E:/product/work_loan_mobile',  //工程目录路径
-	    hg_mod: 'work_loan_mobile'  //工程名
+    	oa_passwd: '',  //oa密码
+    	hg_user: 'yakai',  //hg用户名
+    	hg_project: [
+    		{
+    			hg_dir: 'E:/product/work_loan_mobile',  //工程目录路径
+			    hg_mod: 'work_loan_mobile',  //工程名
+			    hg_module_id: '63'  //工程id
+    		}, {
+                hg_dir: 'E:/product/work_loan_sale',  //工程目录路径
+                hg_mod: 'work_loan_sale',  //工程名
+                hg_module_id: '78'  //工程id
+            }
+    	]
 		
 		
 ### 使用步骤
 
-1.双击add_pub_version.bat，输入版本索引号，默认是最新的，即0，可以不输入，索引从0开始
+1.双击./bin/add_pub_version.bat，输入hg工程和版本索引，默认都是0，即取hg_project配置中的第一项和该工程最新提交的版本

@@ -4,7 +4,10 @@ var request = require('request');
 request = request.defaults({jar: true});
 var config = require('../config').config;
 
-var pub_request = function(desc, file_list){
+var pub_request = function(desc, file_list, hg_project){
+
+    var hg_mod = hg_project.hg_mod;
+    var hg_module_id = hg_project.hg_module_id;
    
     var params = {
         url: 'http://oa.fenqile.com/user/submit.json',
@@ -17,7 +20,7 @@ var pub_request = function(desc, file_list){
 
     request.post(params, function(err, httpResponse, body){
         var cookie = httpResponse.headers['set-cookie'];
-        var version_name = '[' + config.hg_mod + ']' + desc;
+        var version_name = '[' + hg_mod + ']' + desc;
 
         // 创建一个版本
         request.post({
@@ -37,7 +40,7 @@ var pub_request = function(desc, file_list){
 
             // console.log(file_list);
             for(var i = 0; i < file_list.length; i++){
-                file_list[i] = '/home/product/' + config.hg_mod + file_list[i];
+                file_list[i] = '/home/product/' + hg_mod + file_list[i];
             }
             //给某个版本添加一个模块
             request.post({
@@ -49,9 +52,9 @@ var pub_request = function(desc, file_list){
                 },
                 form: {
                     path: file_list,
-                    module: config.hg_module_id,  //模块id
+                    module: hg_module_id,  //模块id
                     project_id: project_id,  //insert_id
-                    desc: '[' + config.hg_mod + ':' + config.hg_module_id + ']' + version_name,  //
+                    desc: '[' + hg_mod + ':' + hg_module_id + ']' + version_name,  //
                     remark: ''
                 },
             }, function(err, httpResponse, body){
