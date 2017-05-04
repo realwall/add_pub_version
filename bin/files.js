@@ -41,7 +41,6 @@ exec(cmd, { encoding: binaryEncoding }, function(err, stdout, stderr){
 
         vd.data = result;
         print_version_list(result);
-        console.log(result);
         get_latest_submit(dir, user, mod, result[version_index] || '');
     } else {
         console.log('获取该工程最新提交文件失败');

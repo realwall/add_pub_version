@@ -1,11 +1,12 @@
 {
   "name": "add_pub_version",
-  "version": "1.0.1",
-  "description": "1.在当前目录运行npm install",
+  "version": "1.0.3",
+  "description": "版本创建工具",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": "./bin/files.js",
   "author": "realwall",
   "license": "ISC",
   "dependencies": {

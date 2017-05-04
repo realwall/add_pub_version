@@ -4,25 +4,20 @@
 
 1.在当前目录运行npm install
 
-2.在`C:\Windows\System32\drivers\etc`中添加host配置
+1.在config.js中添加配置
 
-		58.67.214.173 pub.oa.fenqile.com
-		58.67.214.173 oa.fenqile.com
-
-3.在config.js中添加配置
-
-		oa_user: 'realwallliu',  //oa用户名
+		oa_user: '',  //oa用户名
     	oa_passwd: '',  //oa密码
-    	hg_user: 'relwall',  //hg用户名
+    	hg_user: '',  //hg用户名
     	hg_project: [
     		{
-    			hg_dir: 'E:/product/work_loan_mobile',  //工程目录路径
-			    hg_mod: 'work_loan_mobile',  //工程名
-			    hg_module_id: '63'  //工程id
+    			hg_dir: '',  //工程目录路径
+			    hg_mod: '',  //工程名
+			    hg_module_id: ''  //工程id
     		}, {
-                hg_dir: 'E:/product/work_loan_sale',  //工程目录路径
-                hg_mod: 'work_loan_sale',  //工程名
-                hg_module_id: '78'  //工程id
+                hg_dir: '',  //工程目录路径
+                hg_mod: '',  //工程名
+                hg_module_id: ''  //工程id
             }
     	]
 		

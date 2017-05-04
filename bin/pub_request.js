@@ -10,7 +10,7 @@ var pub_request = function(desc, file_list, hg_project){
     var hg_module_id = hg_project.hg_module_id;
    
     var params = {
-        url: 'http://oa.fenqile.com/user/submit.json',
+        url: 'http://oa.xxx.com/user/submit.json',
         form: {
             min: config.oa_user,
             passwd: md5(config.oa_passwd),
@@ -24,7 +24,7 @@ var pub_request = function(desc, file_list, hg_project){
 
         // 创建一个版本
         request.post({
-            'url': 'http://pub.oa.fenqile.com/version/add.json',
+            'url': 'http://pub.oa.xxx.com/version/add.json',
             'headers': {
                 'X-Requested-With': 'XMLHttpRequest',
                 'User-Agent': 'request',
@@ -44,7 +44,7 @@ var pub_request = function(desc, file_list, hg_project){
             }
             //给某个版本添加一个模块
             request.post({
-                'url': 'http://pub.oa.fenqile.com/version/edit_module.json',
+                'url': 'http://pub.oa.xxx.com/version/edit_module.json',
                 'headers': {
                     'X-Requested-With': 'XMLHttpRequest',
                     'User-Agent': 'request',
